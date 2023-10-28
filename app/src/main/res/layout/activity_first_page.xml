@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".First_Page">
+
+    <ImageView
+        android:id="@+id/logoIcon"
+        android:layout_width="290dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/adminIcon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoIcon"
+        app:srcCompat="@drawable/admin" />
+
+    <Button
+        android:id="@+id/btnAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:width="145dp"
+        android:height="60dp"
+        android:backgroundTint="@color/green2"
+        android:fontFamily="@font/allerta"
+        android:text="ADMIN"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminIcon" />
+
+    <ImageView
+        android:id="@+id/exporterIcon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdmin"
+        app:srcCompat="@drawable/exporter" />
+
+    <Button
+        android:id="@+id/btnExporter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:width="145dp"
+        android:height="60dp"
+        android:backgroundTint="@color/green2"
+        android:fontFamily="@font/allerta"
+        android:text="EXPORTER"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exporterIcon" />
+
+    <ImageView
+        android:id="@+id/buyerIcon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/exporterIcon"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdmin"
+        app:srcCompat="@drawable/buyer" />
+
+    <Button
+        android:id="@+id/btnBuyer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="145dp"
+        android:height="60dp"
+        android:backgroundTint="@color/green2"
+        android:fontFamily="@font/allerta"
+        android:text="BUYER"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnExporter"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buyerIcon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

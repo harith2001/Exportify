@@ -7,6 +7,7 @@ data class ServiceGig(
     var noOfUnits: String? = null,
     var price: String? = null,
     var id: String? = null,
-    var uid: String? = null
+    var uid: String? = null,
+    var imageUrl:String?=null
 
 )

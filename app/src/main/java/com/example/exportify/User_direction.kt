@@ -23,7 +23,14 @@ class User_direction : AppCompatActivity() {
             intent = Intent(applicationContext, Exporter_registration::class.java)
             startActivity(intent)
         }
-
+        binding.btnAdminS.setOnClickListener{
+            intent = Intent(applicationContext, Admin_Signup::class.java)
+            startActivity(intent)
+        }
+        binding.btnbackb.setOnClickListener{
+            intent = Intent(applicationContext, Login::class.java)
+            startActivity(intent)
+        }
 
     }
 }

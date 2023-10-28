@@ -12,7 +12,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 
-class BuyerProfile : AppCompatActivity() {
+class  BuyerProfile : AppCompatActivity() {
 
     private lateinit var binding: ActivityBuyerProfileBinding
     private lateinit var auth: FirebaseAuth
@@ -25,6 +25,10 @@ class BuyerProfile : AppCompatActivity() {
         binding = ActivityBuyerProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.imageView6.setOnClickListener {
+            intent = Intent(this, Buyer_dashboard::class.java)
+            startActivity(intent)
+        }
 
         //initialize variables
         auth = FirebaseAuth.getInstance()
@@ -83,17 +87,10 @@ class BuyerProfile : AppCompatActivity() {
         }
 
         binding.deleteBtn.setOnClickListener {
-            var currUser = FirebaseAuth.getInstance().currentUser
-            currUser?.delete()
-                ?.addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        Toast.makeText(this, "Account Deleted", Toast.LENGTH_SHORT).show()
-                        intent = Intent(applicationContext, Login::class.java)
-                        startActivity(intent)
-                    } else {
-                        Toast.makeText(this, "Failed to delete the account", Toast.LENGTH_SHORT).show()
-                    }
-                }
+            databaseRef.child(auth.currentUser!!.uid).removeValue()
+            FirebaseAuth.getInstance().currentUser!!.delete()
+            intent = Intent(this, Login::class.java)
+            startActivity(intent)
         }
 
     }

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Admin_Signup">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:text="Create New Account"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="388dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etFName1"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_marginTop="10dp"
+            android:width="370dp"
+            android:height="50dp"
+            android:background="@drawable/green_layout"
+            android:ems="10"
+            android:hint="@string/registration_firstname"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etLName1"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginTop="10dp"
+            android:width="370dp"
+            android:height="50dp"
+            android:background="@drawable/green_layout"
+            android:ems="10"
+            android:hint="@string/registration_lastname"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etEmail1"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginTop="10dp"
+            android:width="370dp"
+            android:height="50dp"
+            android:background="@drawable/green_layout"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etContactNum1"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginTop="10dp"
+            android:width="370dp"
+            android:height="50dp"
+            android:autofillHints=""
+            android:background="@drawable/green_layout"
+            android:ems="10"
+            android:hint="Contact Number"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etpass1"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginTop="10dp"
+            android:width="370dp"
+            android:height="50dp"
+            android:autofillHints=""
+            android:background="@drawable/green_layout"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegister12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="30dp"
+        android:width="125dp"
+        android:height="60dp"
+        android:backgroundTint="#389AD1"
+        android:hint="@string/registration_btn_register"
+        android:text="SIGN UP"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/registerQuestion"
+        android:text="Already have an account?"
+        android:textColor="#131313"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="125dp"
+        android:height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="140dp"
+        android:backgroundTint="@color/green2"
+        android:hint="@string/registration_btn_cancel"
+        android:text="LOGIN"
+        android:textColor="#000000" />
+
+</LinearLayout>

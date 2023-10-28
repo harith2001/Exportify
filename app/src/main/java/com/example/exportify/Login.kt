@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.exportify.databinding.LoginBinding
+import com.example.exportify.models.AdminModel
 import com.example.exportify.models.UserModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
@@ -23,14 +24,16 @@ class Login : AppCompatActivity() {
 
         //Initializing auth
         auth = FirebaseAuth.getInstance()
-
         databaseReference = FirebaseDatabase.getInstance().getReference("users")
 
-        if( auth.currentUser != null ) {
-            checkUserType()
+        binding.imageView2.setOnClickListener {
+            intent = Intent(applicationContext, First_Page::class.java)
+            startActivity(intent)
         }
 
+
         binding.btnLogin.setOnClickListener {
+
             val email = binding.etEmail.text.toString()
             val password = binding.etPwd.text.toString()
 
@@ -80,14 +83,18 @@ class Login : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 //retrieve values from the db and convert them to user data class
                 var user = snapshot.getValue(UserModel::class.java)!!
+                var admin = snapshot.getValue(AdminModel::class.java)!!
 
                 if( user.type == "buyer") {
                     intent = Intent(applicationContext, Buyer_dashboard::class.java)
                     startActivity(intent)
-                } else {
+                } else if ( user.type == "exporter"){
                     intent = Intent(applicationContext, Exporter_dashboard::class.java)
                     startActivity(intent)
-                }
+                }else if ( admin.type == "admin") {
+                    intent = Intent(applicationContext, Admin_Dashboard::class.java)
+                    startActivity(intent)
+            }
             }
 
             override fun onCancelled(error: DatabaseError) {

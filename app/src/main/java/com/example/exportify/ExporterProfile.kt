@@ -23,6 +23,11 @@ class ExporterProfile : AppCompatActivity() {
         binding = ActivityExporterProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.imageView7.setOnClickListener {
+            intent = Intent(this, Exporter_dashboard::class.java)
+            startActivity(intent)
+        }
+
         //initialize variables
         auth = FirebaseAuth.getInstance()
         uid = auth.currentUser?.uid.toString()
@@ -80,17 +85,10 @@ class ExporterProfile : AppCompatActivity() {
         }
 
         binding.deleteBtn.setOnClickListener {
-            var currUser = auth.currentUser
-            currUser?.delete()
-                ?.addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        Toast.makeText(this, "Account Deleted", Toast.LENGTH_SHORT).show()
-                        intent = Intent(applicationContext, Login::class.java)
-                        startActivity(intent)
-                    } else {
-                        Toast.makeText(this, "Failed to delete the account", Toast.LENGTH_SHORT).show()
-                    }
-                }
+            databaseRef.child(auth.currentUser!!.uid).removeValue()
+            FirebaseAuth.getInstance().currentUser!!.delete()
+            intent = Intent(this, Login::class.java)
+            startActivity(intent)
         }
 
     }

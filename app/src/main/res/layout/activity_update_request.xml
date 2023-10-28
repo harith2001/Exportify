@@ -8,123 +8,115 @@
     android:orientation="vertical"
     tools:context=".UpdateRequest">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+<!--        <TextView-->
+<!--            android:id="@+id/textView32"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="41dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="4dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:background="#219658"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textSize="20dp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-        <TextView
-            android:id="@+id/textView32"
-            android:layout_width="match_parent"
-            android:layout_height="41dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="10dp"
-            android:background="#219658"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_arrow_back_24"/>
 
-        <TextView
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="20dp"
+        android:text="Request Details"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="120sp"
-            android:layout_marginTop="30dp"
-            android:background="#ECE2E2"
-            android:text="Update Request"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="35dp"
-            android:layout_marginTop="30dp"
-            android:text="Topic"
-            android:textColor="#000"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
 
         <EditText
 
             android:id="@+id/etTopic"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="35dp"
+            android:layout_width="370dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="35dp"
+            android:background="@drawable/green_layout"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Grocery Items" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="35dp"
-            android:layout_marginTop="30dp"
-            android:text="Description"
-            android:textColor="#000"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+            android:text="Ayurvedic Herbal Supplements" />
 
         <EditText
 
             android:id="@+id/etUpReqDes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="35dp"
+            android:layout_width="370dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="35dp"
+            android:background="@drawable/green_layout"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Request Description" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="35dp"
-            android:layout_marginTop="30dp"
-            android:text="Price Range"
-            android:textColor="#000"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+            android:text="$4 - $6 per bottle" />
 
         <EditText
 
             android:id="@+id/etPr"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="35dp"
+            android:layout_width="370dp"
+            android:layout_height="280dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="35dp"
+            android:background="@drawable/green_layout"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="50$-200$" />
+            android:text="Seeking a reliable supplier of Ayurvedic herbal supplements for a health and wellness brand.
+Require bulk quantities of various herbal formulations, with a minimum order quantity of 10,000 bottles." />
 
-        <Button
-            android:id="@+id/btnUpdate"
-            android:layout_width="205dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="90sp"
-            android:layout_marginTop="50sp"
-            android:backgroundTint="@color/green2"
-            android:text="Update "
-            android:textColor="#000000" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/btnDlt"
-            android:layout_width="202dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="90sp"
-            android:layout_marginTop="20sp"
-            android:backgroundTint="#EF3939"
-            android:text="Delete"
-            android:textColor="#000000" />
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp">
 
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="125dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="5sp"
+                android:backgroundTint="@color/btnNewReqAdd"
+                android:text="Update "
+                android:textColor="@color/white" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/btnDlt"
+                android:layout_width="125dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="60sp"
+                android:layout_marginTop="5sp"
+                android:backgroundTint="#D33F3F"
+                android:text="Delete"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
 </LinearLayout>

@@ -23,6 +23,10 @@ class CreateRequest : AppCompatActivity() {
         binding = ActivityCreateRequestBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.backBtn.setOnClickListener {
+            intent = Intent(this, Buyer_dashboard::class.java)
+            startActivity(intent)
+        }
 
         //initialize variables
         auth = FirebaseAuth.getInstance()

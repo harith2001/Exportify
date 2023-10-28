@@ -21,6 +21,10 @@ class CardDetails : AppCompatActivity() {
         binding = ActivityCardDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnCardCancel.setOnClickListener {
+            val intent = Intent(this, Buyer_dashboard::class.java)
+            startActivity(intent)
+        }
 
         //initialize variables
         auth = FirebaseAuth.getInstance()

@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.exportify.R
 import com.example.exportify.models.BuyerRequestsModel
+import com.example.exportify.models.ServiceGig
 
 class BuyerRequestsAdapter(var mList: List<BuyerRequestsModel>) :
     RecyclerView.Adapter<BuyerRequestsAdapter.viewHolder>() {
@@ -49,6 +50,12 @@ class BuyerRequestsAdapter(var mList: List<BuyerRequestsModel>) :
         holder.title.text = mList[position].topic
         holder.range.text = mList[position].priceRange
         holder.des.text = mList[position].description
+    }
+
+    //search function filteration
+    fun setFilteredList(mList: List<BuyerRequestsModel>){
+        this.mList = mList
+        notifyDataSetChanged()
     }
 
 

@@ -20,6 +20,11 @@ class PaymentDetails : AppCompatActivity() {
         binding = ActivityPaymentDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnPaymentCancel.setOnClickListener {
+            intent = Intent(applicationContext, Buyer_dashboard::class.java)
+            startActivity(intent)
+        }
+
         //initialize variables
         auth = FirebaseAuth.getInstance()
         uid = auth.currentUser?.uid.toString()

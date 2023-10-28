@@ -28,9 +28,13 @@ class MyServiceGigs : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding =
-            ActivityMyServiceGigsBinding.inflate(layoutInflater)//binding is used to explicit the findViewByID
+        binding = ActivityMyServiceGigsBinding.inflate(layoutInflater)//binding is used to explicit the findViewByID
         setContentView(binding.root)
+
+        binding.backBtn.setOnClickListener {
+            intent = Intent(this, Exporter_dashboard::class.java)
+            startActivity(intent)
+        }
 
 
         //search Function for service gigs

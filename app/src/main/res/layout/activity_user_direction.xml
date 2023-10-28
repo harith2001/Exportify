@@ -13,6 +13,7 @@
         android:layout_marginTop="200dp"
         android:hint="@string/userDirection_text"
         android:text="Tell us who you are"
+        android:textColor="#131313"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -52,4 +53,26 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnBuyer"
         app:layout_constraintTop_toTopOf="@+id/btnBuyer" />
+
+    <ImageView
+        android:id="@+id/btnAdminS"
+        android:layout_width="52dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="338dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="27dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseline_settings_24" />
+
+    <ImageView
+        android:id="@+id/btnbackb"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="368dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

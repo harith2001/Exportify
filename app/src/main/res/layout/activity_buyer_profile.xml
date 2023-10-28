@@ -13,7 +13,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="10dp"
-        android:background="#219658"
+        android:background="@color/hrbar"
         android:text="Buyer"
         android:textAlignment="center"
         android:textColor="#131313"
@@ -42,7 +42,7 @@
         android:layout_marginStart="34dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="35dp"
-        android:background="#219658"
+        android:background="@color/btnNewReqAdd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -128,7 +128,7 @@
         android:layout_height="252dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="13dp"
-        android:background="#219658"
+        android:background="@color/btnNewReqAdd"
         app:layout_constraintEnd_toStartOf="@+id/country"
         app:layout_constraintTop_toBottomOf="@+id/last_name" />
 
@@ -212,7 +212,7 @@
         android:layout_marginStart="6dp"
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="4dp"
-        android:background="#219658"
+        android:background="@color/hrbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -286,7 +286,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="#2196F3"
+        android:backgroundTint="@color/btnNewReqAdd"
         android:text="Requests"
         android:textColor="#131313"
         app:layout_constraintEnd_toEndOf="parent"
@@ -320,6 +320,18 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phone_no" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="126dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

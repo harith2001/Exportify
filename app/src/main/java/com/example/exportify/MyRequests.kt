@@ -5,13 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.exportify.Adapters.BuyerRequestsAdapter
-import com.example.exportify.databinding.ActivityExporterDashboardBinding
 import com.example.exportify.databinding.ActivityMyRequestsBinding
 import com.example.exportify.models.BuyerRequestsModel
-import com.example.exportify.models.UserModel
+import androidx.appcompat.widget.SearchView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import java.util.Locale
 
 private lateinit var binding: ActivityMyRequestsBinding
 private lateinit var auth: FirebaseAuth
@@ -19,12 +20,28 @@ private lateinit var databaseRef: DatabaseReference
 private lateinit var uid: String
 private var mList = ArrayList<BuyerRequestsModel>()
 private lateinit var adapter: BuyerRequestsAdapter
+private lateinit var recyclerView: RecyclerView
+private lateinit var searchView: SearchView
+
 
 class MyRequests : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMyRequestsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        recyclerView = binding.recyclerview
+        searchView = binding.searchView
+
+        searchView.setOnQueryTextListener(object: androidx.appcompat.widget.SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+            override fun onQueryTextChange(newText: String?): Boolean {
+                filterList2(newText)
+                return true
+            }
+        })
 
         //initialize variables
         auth = FirebaseAuth.getInstance()
@@ -85,4 +102,23 @@ class MyRequests : AppCompatActivity() {
         mList.add(BuyerRequestsModel("topic", "This is des","150000 - 210000","",""))
         mList.add(BuyerRequestsModel("topic", "This is des","150000 - 210000","",""))
     }
+
+    private fun filterList2(query: String?) {
+        if(query!= null){
+            val filteredList = ArrayList<BuyerRequestsModel>()
+            for (i in mList){
+                if (i.topic?.lowercase(Locale.ROOT)?.contains(query?.lowercase(Locale.ROOT) ?: "") == true){
+                    filteredList.add(i)
+                }
+            }
+            if(filteredList.isEmpty()){
+                Toast.makeText(this,"NO data found",Toast.LENGTH_SHORT).show()
+            }else{
+                adapter.setFilteredList(filteredList)
+            }
+        }
+    }
+
+
+
 }

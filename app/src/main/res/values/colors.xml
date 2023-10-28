@@ -18,6 +18,12 @@
 
 
     <color name="progressbarColour">#65cf06</color>
-    <color name="green2">#219658</color>
+    <color name="green2">#B6E3FC</color>
+
+    <color name="hrbar">#389AD1</color>
+
+    <color name="circle_background_color">#B6E3FC</color>
+
+    <color name="btnNewReqAdd">#4683A6</color>
 
 </resources>
