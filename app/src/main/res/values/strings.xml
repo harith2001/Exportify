@@ -29,6 +29,7 @@
     <string name="registration_cnum">Contact Number</string>
     <string-array name="registration_countries">
         <item>Country</item>
+        <item>Sri Lanka</item>
         <item>Afghanistan</item>
         <item>Albania</item>
         <item>Algeria</item>
@@ -118,6 +119,7 @@
         <item>Japan</item>
         <item>Jordan</item>
         <item>Kazakhstan</item>
+
     </string-array>
     <string name="registration_state">State</string>
     <string name="registration_zipcode">Zipcode</string>

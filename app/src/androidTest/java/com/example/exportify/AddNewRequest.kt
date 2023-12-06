@@ -20,6 +20,8 @@ class CreateRequestTest {
     @get:Rule
     var activityScenarioRule = activityScenarioRule<CreateRequest>()
 
+
+
     @Test
     fun testCreateRequest() {
         // Type input values
@@ -38,6 +40,9 @@ class CreateRequestTest {
             .inRoot(withDecorView(not(activityScenarioRule.scenario.window.decorView)))
             .check(matches(isDisplayed()))
 
+
+    }
+    private fun <T> activityScenarioRule(): T {
 
     }
 }

@@ -11,8 +11,6 @@ import org.junit.Test
 
 class LoginTest {
 
-
-
     class LoginTest {
 
         @get:Rule

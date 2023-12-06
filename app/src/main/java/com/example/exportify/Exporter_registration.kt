@@ -36,7 +36,7 @@ class Exporter_registration : AppCompatActivity() {
 
         binding.btnRegister.setOnClickListener {
             validateFormData()
-            if( validityCount == 11 ) {
+            if( validityCount == 10 ) {
                 createUser()
             }
         }
